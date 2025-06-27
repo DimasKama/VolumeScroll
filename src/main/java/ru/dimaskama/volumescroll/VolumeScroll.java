@@ -23,7 +23,7 @@ public class VolumeScroll {
 
     public static boolean handleScroll(Vector2i vector) {
         MinecraftClient client = MinecraftClient.getInstance();
-        if (client.player.isSneaking() && client.targetedEntity instanceof AbstractClientPlayerEntity target) {
+        if (client.mouse.wasRightButtonClicked() && client.targetedEntity instanceof AbstractClientPlayerEntity target) {
             PlayerState state = ClientManager.getPlayerStateManager().getState(target.getUuid());
             if (state != null) {
                 double prevVolume = VoicechatClient.VOLUME_CONFIG.getPlayerVolume(state.getUuid());

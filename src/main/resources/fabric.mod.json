@@ -3,7 +3,7 @@
   "id": "volumescroll",
   "version": "${version}",
   "name": "VolumeScroll",
-  "description": "Adjust Simple Voice Chat players volume with Shift + Mouse Wheel Scroll",
+  "description": "Adjust Simple Voice Chat players volume with RMB + Mouse Wheel Scroll",
   "authors": [
     "DimasKama"
   ],
