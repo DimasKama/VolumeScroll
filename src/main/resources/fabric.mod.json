@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "volumescroll",
+  "version": "${version}",
+  "name": "VolumeScroll",
+  "description": "Adjust Simple Voice Chat players volume with Shift + Mouse Wheel Scroll",
+  "authors": [
+    "DimasKama"
+  ],
+  "license": "All-Rights-Reserved",
+  "icon": "assets/volumescroll/icon.png",
+  "environment": "client",
+  "mixins": [
+    "volumescroll.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.7",
+    "minecraft": ">=1.21.3",
+    "java": ">=21",
+    "fabric-api": "*",
+    "voicechat": "*"
+  }
+}
