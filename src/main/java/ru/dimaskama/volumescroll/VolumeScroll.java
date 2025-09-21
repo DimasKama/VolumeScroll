@@ -26,10 +26,10 @@ public class VolumeScroll {
         if (client.mouse.wasRightButtonClicked() && client.targetedEntity instanceof AbstractClientPlayerEntity target) {
             PlayerState state = ClientManager.getPlayerStateManager().getState(target.getUuid());
             if (state != null) {
-                double prevVolume = VoicechatClient.VOLUME_CONFIG.getPlayerVolume(state.getUuid());
+                double prevVolume = VoicechatClient.PLAYER_VOLUME_CONFIG.getVolume(state.getUuid());
                 double newVolume = MathHelper.clamp(prevVolume + (prevVolume >= 1.0 ? 0.1 : 0.05) * (vector.y == 0 ? -vector.x : vector.y), 0.0, 4.0);
-                VoicechatClient.VOLUME_CONFIG.setPlayerVolume(state.getUuid(), newVolume);
-                VoicechatClient.VOLUME_CONFIG.save();
+                VoicechatClient.PLAYER_VOLUME_CONFIG.setVolume(state.getUuid(), newVolume);
+                VoicechatClient.PLAYER_VOLUME_CONFIG.save();
                 int percent = (int) Math.round(100.0 * (newVolume - 1.0));
                 VOLUME_MESSAGES.put(state.getUuid(), new VolumeMessage(Text.literal((percent >= 0 ? "+" + percent : String.valueOf(percent)) + "%")));
                 return true;
