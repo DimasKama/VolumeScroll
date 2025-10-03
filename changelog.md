@@ -1,1 +1,2 @@
-Initial release
+- Mark mc 1.21.3 as not compatible
+- Update to newer Simple Voice Chat versions
