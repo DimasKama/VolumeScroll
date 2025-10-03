@@ -11,7 +11,7 @@
     "requireAnnotations": true
   },
   "client": [
-    "EntityRendererMixin",
-    "MouseMixin"
+    "MouseMixin",
+    "PlayerEntityRendererMixin"
   ]
 }
